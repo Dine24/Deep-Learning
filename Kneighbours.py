@@ -5,15 +5,17 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.metrics import confusion_matrix, accuracy_score
 
+
+
 # Load the dataset
-dataset = pd.read_csv("IRIS.csv")
+dataset = pd.read_csv("iris.csv")
 
 # Split the dataset into features (X) and labels (y)
 X = dataset.iloc[:, :-1].values
 y = dataset.iloc[:, -1].values
 
 # Split the dataset into a training set and a test set
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.20, random_state=42)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=52)
 
 # Feature Scaling
 scaler = StandardScaler()
